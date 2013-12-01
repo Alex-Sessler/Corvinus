@@ -45,118 +45,6 @@ body
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript">
-<!--
-function SwapImage()
-{
-   var doc=document, args=arguments;
-   doc.$imgSwaps = new Array();
-   for(var i=2; i<args.length; i+=2)
-   {
-      var elem=FindObject(args[i]);
-      if(elem)
-      {
-         doc.$imgSwaps[doc.$imgSwaps.length]=elem;
-         elem.$src=elem.src;
-         elem.src=args[i+1];
-      }
-   }
-}
-function FindObject(id, doc)
-{
-   var child, elem;
-   if(!doc)
-      doc=document;
-   if(doc.getElementById)
-      elem=doc.getElementById(id);
-   else
-   if(doc.layers)
-      child=doc.layers;
-   else
-   if(doc.all)
-      elem=doc.all[id];
-   if(elem)
-      return elem;
-   if(doc.id==id || doc.name==id)
-      return doc;
-   if(doc.childNodes)
-      child=doc.childNodes;
-   if(child)
-   {
-      for(var i=0; i<child.length; i++)
-      {
-         elem=FindObject(id,child[i]);
-         if(elem)
-            return elem;
-      }
-   }
-   var frm=doc.forms;
-   if(frm)
-   {
-      for(var i=0; i<frm.length; i++)
-      {
-         var elems=frm[i].elements;
-         for(var j=0; j<elems.length; j++)
-         {
-            elem=FindObject(id,elems[i]);
-            if(elem) return elem;
-         }
-      }
-   }
-   return null;
-}
-function FadeImage(id, duration)
-{
-   var millisec = Math.round(duration / 100);
-   var timer = 0;
-   for(i = 0; i <= 100; i++)
-   {
-      setTimeout("SetOpacity('" + id + "'," + i + ")",(timer * millisec));
-      timer++;
-   }
-}
-function SetOpacity(id, opacity)
-{
-   var element = document.getElementById(id).style;
-   element.opacity = (opacity / 100);
-   element.MozOpacity = (opacity / 100);
-   element.KhtmlOpacity = (opacity / 100);
-   element.filter = "alpha(opacity=" + opacity + ")";
-}
-//-->
-</script>
-<script type="text/javascript">
-<!--
-function PreloadImages()
-{
-   var imageObj = new Image();
-   var images = new Array();
-   images[0]="./images/head1corvinusrooms.jpg";
-   images[1]="./images/head2corvinus.png";
-   images[2]="./images/head3belvedere.png";
-   images[3]="./images/img0601.gif";
-   images[4]="./images/img0601_over.gif";
-   images[5]="./images/img0602.gif";
-   images[6]="./images/img0602_over.gif";
-   images[7]="./images/img0603.gif";
-   images[8]="./images/img0603_over.gif";
-   images[9]="./images/img0604.gif";
-   images[10]="./images/img0604_over.gif";
-   images[11]="./images/img0605.gif";
-   images[12]="./images/img0605_over.gif";
-   images[13]="./images/img0606.gif";
-   images[14]="./images/img0606_over.gif";
-   images[15]="./images/img0607.gif";
-   images[16]="./images/img0607_over.gif";
-   images[17]="./images/img0608.gif";
-   images[18]="./images/img0608_over.gif";
-   for (var i=0; i<=18; i++)
-   {
-      imageObj.src = images[i];
-   }
-}
-// -->
-</script>
 <style type="text/css">
 a:visited
 {
@@ -212,33 +100,9 @@ a.style2:hover
 <div id="wb_Shape9" style="position:absolute;left:799px;top:0px;width:1px;height:216px;z-index:8;" align="left">
 <img src="images/img0615.gif" id="Shape9" align="top" alt="" title="" border="0" width="1" height="216"></div>
 <div id="wb_SlideShow1" style="position:absolute;left:2px;top:116px;width:796px;height:135px;z-index:9;overflow:hidden" align="left">
-<script type="text/javascript">
-<!--
-   var SlideShow1_Index = -1;
-   var SlideShow1_Images = new Array();
-   SlideShow1_Images[0] = ["images/head1corvinusrooms.jpg","",""];
-   SlideShow1_Images[1] = ["images/head2corvinus.png","",""];
-   SlideShow1_Images[2] = ["images/head3belvedere.png","http://",""];
-
-   function SlideShow1ShowNext()
-   {
-      SlideShow1_Index = SlideShow1_Index + 1;
-      if (SlideShow1_Index > 2)
-         SlideShow1_Index = 0;
-      document.getElementById('SlideShow1_Fade').src = document.getElementById('SlideShow1').src;
-      SetOpacity('SlideShow1', 0);
-      eval("document.SlideShow1.src = SlideShow1_Images[" + SlideShow1_Index + "][0]");
-      setTimeout("SlideShow1ShowNext();", 4000);
-      FadeImage('SlideShow1', 1500);
-   }
-// -->
-</script>
 <img src="images/head1corvinusrooms.jpg" style="position:absolute;left:0px;top:0px;" id="SlideShow1_Fade" border="0" align="top" alt="" width="796" height="135" name="SlideShow1_Fade">
 <img src="images/head1corvinusrooms.jpg" style="position:absolute;left:0px;top:0px;" id="SlideShow1" border="0" align="top" alt="" width="796" height="135" name="SlideShow1">
 <script type="text/javascript">
-<!--
-  SlideShow1ShowNext();
-// -->
 </script>
 </div>
 <div id="wb_Text4" style="position:absolute;left:13px;top:20px;width:652px;height:43px;z-index:10;" align="left">
